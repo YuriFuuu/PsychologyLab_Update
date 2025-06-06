@@ -1,0 +1,216 @@
+
+Test 1
+sigma_v: 0.01, sigma_omega: 0.001, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 1274.95 ± 76.33
+Best params: [0.01  0.01  0.001 0.5   0.23 ]
+Final negative log-likelihood: 4886.895685983331
+
+Test 2
+sigma_v: 0.01, sigma_omega: 0.001, sigma_obs: 1
+Cross-validation results:
+Average validation score: 3754.43 ± 4507.45
+Best params: [0.01408155 0.00969971 0.00118902 0.99927334 0.22982349]
+Final negative log-likelihood: 6827.617345922783
+
+Test 3
+sigma_v: 0.01, sigma_omega: 0.01, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 1296.83 ± 71.68
+Best params: [0.03642144 0.03471209 0.00516726 0.40472891 0.38338371]
+Final negative log-likelihood: 4303.115206967552
+
+Test 4
+sigma_v: 0.01, sigma_omega: 0.01, sigma_obs: 1
+Cross-validation results:
+Average validation score: 3593.91 ± 4256.17
+Best params: [0.0235788  0.03127593 0.00312268 0.44562298 0.3712686 ]
+Final negative log-likelihood: 4347.202577583581
+
+Test 5
+sigma_v: 0.01, sigma_omega: 0.1, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 1367.97 ± 113.21
+Best params: [0.01 0.01 0.1  0.5  0.23]
+Final negative log-likelihood: 4802.830846948705
+
+Test 6
+sigma_v: 0.01, sigma_omega: 0.1, sigma_obs: 1
+Cross-validation results:
+Average validation score: 3769.42 ± 4658.11
+Best params: [0.02754866 0.02983108 0.02189662 0.41398547 0.38640863]
+Final negative log-likelihood: 4165.977874262462
+
+Test 7
+sigma_v: 0.01, sigma_omega: 0.5, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 1603.15 ± 44.15
+Best params: [0.01000432 0.01000432 0.50000411 0.50000411 0.22999991]
+Final negative log-likelihood: 5265.157001223829
+
+Test 8
+sigma_v: 0.01, sigma_omega: 0.5, sigma_obs: 1
+Cross-validation results:
+Average validation score: 1799.81 ± 5.95
+Best params: [0.01000078 0.01000082 0.50000065 1.00000058 0.23000002]
+Final negative log-likelihood: 7104.30543796738
+
+Test 9
+sigma_v: 0.1, sigma_omega: 0.001, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 1302.25 ± 113.58
+Best params: [0.03634274 0.04088746 0.00725478 0.41764783 0.40051045]
+Final negative log-likelihood: 4471.319085263286
+
+Test 10
+sigma_v: 0.1, sigma_omega: 0.001, sigma_obs: 1
+Cross-validation results:
+Average validation score: 5163369247121354823292990183200398196740331136779593933344681448290762879740943443759516915977412533070570979328.00 ± 10326738494242709646585980366400796393480662273559187866689362896581525759481886887519033831954825066141141958656.00
+Best params: [0.02323456 0.03484496 0.00214423 0.44171548 0.39345941]
+Final negative log-likelihood: 4353.2992345556695
+
+Test 11
+sigma_v: 0.1, sigma_omega: 0.01, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 1267.03 ± 41.68
+Best params: [0.03642323 0.03470851 0.00516736 0.40472764 0.383389  ]
+Final negative log-likelihood: 4303.118703488955
+
+Test 12
+sigma_v: 0.1, sigma_omega: 0.01, sigma_obs: 1
+Cross-validation results:
+Average validation score: 1375.47 ± 173.20
+Best params: [0.03121637 0.03127169 0.01142169 0.42100502 0.39793082]
+Final negative log-likelihood: 4296.77644288817
+
+Test 13
+sigma_v: 0.1, sigma_omega: 0.1, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 66016907701195313892141347557282664000431872116487653875771244544.00 ± 132033815402390627784282695114565328000863744232975307751542489088.00
+Best params: [0.0585459  0.03032511 0.07019519 0.41814479 0.25234494]
+Final negative log-likelihood: 4435.654220448704
+
+Test 14
+sigma_v: 0.1, sigma_omega: 0.1, sigma_obs: 1
+Cross-validation results:
+Average validation score: 1442.54 ± 81.30
+Best params: [0.01906704 0.02893952 0.0269991  0.40937076 0.39655961]
+Final negative log-likelihood: 4203.153514848066
+
+Test 15
+sigma_v: 0.1, sigma_omega: 0.5, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 1864.49 ± 25.63
+Best params: [0.1  0.1  0.5  0.5  0.23]
+Final negative log-likelihood: 5257.109073099173
+
+Test 16
+sigma_v: 0.1, sigma_omega: 0.5, sigma_obs: 1
+Cross-validation results:
+Average validation score: 2126.39 ± 68.04
+Best params: [0.1        0.1        0.50000027 1.00000026 0.23000002]
+Final negative log-likelihood: 7430.229721024485
+
+Test 17
+sigma_v: 0.5, sigma_omega: 0.001, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 356366042401495709951807205540798844885102537229674675687618469838294433316925866437228452784231153664.00 ± 712732084802991419903614411081597689770205074459349351375236939676588866633851732874456905568462307328.00
+Best params: [0.02614702 0.03692061 0.00193852 0.45681338 0.49287696]
+Final negative log-likelihood: 4476.333219416308
+
+Test 18
+sigma_v: 0.5, sigma_omega: 0.001, sigma_obs: 1
+Cross-validation results:
+Average validation score: 3032.50 ± 3105.66
+Best params: [0.01841578 0.04039738 0.00368792 0.42705109 0.36765488]
+Final negative log-likelihood: 4336.521225483563
+
+Test 19
+sigma_v: 0.5, sigma_omega: 0.01, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 487062168880881902670494188994998705034575804466248106205279848693269417284566565709837832077393551983930321806800883277157987258132202312243857189486521276163495559168.00 ± inf
+Best params: [0.41853314 0.42296835 0.02640978 0.34162352 0.31889231]
+Final negative log-likelihood: 5516.3897899070425
+
+Test 20
+sigma_v: 0.5, sigma_omega: 0.01, sigma_obs: 1
+Cross-validation results:
+Average validation score: 221044353425751913187856422690286413067355687647095530621916539821990448598101884391366054628802031431888923893212119040.00 ± 442088706851503826375712845380572826134711375294191061243833079643980897196203768782732109257604062863777847786424238080.00
+Best params: [0.0232334  0.03484314 0.00214438 0.44172575 0.39347035]
+Final negative log-likelihood: 4353.311039477019
+
+Test 21
+sigma_v: 0.5, sigma_omega: 0.1, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 7870.84 ± 3207.07
+Best params: [0.01764664 0.08277759 0.07542651 0.394679   0.34538075]
+Final negative log-likelihood: 4325.516491968842
+
+Test 22
+sigma_v: 0.5, sigma_omega: 0.1, sigma_obs: 1
+Cross-validation results:
+Average validation score: 2999355952280044111396864.00 ± 5998711904560088222793728.00
+Best params: [0.05006777 0.05553963 0.02939444 0.37982197 0.421769  ]
+Final negative log-likelihood: 4166.4389407904
+
+Test 23
+sigma_v: 0.5, sigma_omega: 0.5, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 8408.75 ± 211.80
+Best params: [0.49999983 0.50000317 0.49999983 0.49999984 0.22999993]
+Final negative log-likelihood: 6479.571166753482
+
+Test 24
+sigma_v: 0.5, sigma_omega: 0.5, sigma_obs: 1
+Average validation score: 1685930742241124524413017642539104295945083274984108625909870581982457259340390720200918227482966310680428068853380519235319534110201620725760.00 ± 3371861484482249048826035285078208591890166549968217251819741163964914518680781440401836454965932621360856137706761038470639068220403241451520.00
+Best params: [0.5000022  0.50000221 0.50000221 1.00000208 0.23000019]
+Final negative log-likelihood: 8442.70631565764
+
+Test 25
+sigma_v: 1, sigma_omega: 0.001, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 11080.15 ± 87.05
+Best params: [1.00000557 1.00000586 0.00100119 0.50000056 0.22999838]
+Final negative log-likelihood: 55558.869285720844
+
+Test 26
+sigma_v: 1, sigma_omega: 0.001, sigma_obs: 1
+Cross-validation results:
+Average validation score: 9776516126427663877911136770317544476746228986328976982016.00 ± 19553032252855330543415423356962981645457242053703142211584.00
+Best params: [0.03092197 0.03262812 0.01945589 0.41069935 0.39924205]
+Final negative log-likelihood: 4152.732786347239
+
+Test 27
+sigma_v: 1, sigma_omega: 0.01, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 11095.85 ± 74.55
+Best params: [1.00000023 1.0000003  0.01000031 0.50000033 0.23000013]
+Final negative log-likelihood: 55352.664276537645
+
+Test 28
+sigma_v: 1, sigma_omega: 0.01, sigma_obs: 1
+Cross-validation results:
+Average validation score: 10964.46 ± 129.97
+Best params: [1.   1.   0.1  0.5  0.23]
+Final negative log-likelihood: 18916.410131108263
+
+Test 30
+sigma_v: 1, sigma_omega: 0.1, sigma_obs: 1
+Cross-validation results:
+Average validation score: 8297.57 ± 3391.49
+Best params: [0.10107412 0.04929199 0.03750044 0.37664408 0.43150267]
+Final negative log-likelihood: 4217.996783212898
+
+Test 31
+sigma_v: 1, sigma_omega: 0.5, sigma_obs: 0.5
+Cross-validation results:
+Average validation score: 10149.59 ± 214.18
+Best params: [1.   1.   0.5  0.5  0.23]
+Final negative log-likelihood: 13001.708574625336
+
+Test 32
+sigma_v: 1, sigma_omega: 0.5, sigma_obs: 1
+Cross-validation results:
+Average validation score: 10186.37 ± 146.63
+Best params: [0.99999983 1.00000153 0.50000161 1.00000153 0.23000013]
+Final negative log-likelihood: 9238.534854725654
