@@ -209,7 +209,7 @@ def smoother(s_filt, P_filt, s_hat, P, timestamps, virtual_timestamps):
 
     return s_smooth, P_smooth
 
-# ---------------------- Segment and Visualize ----------------------
+# ---------------------- Time Segments ----------------------
 
 DT_VIRT = 0.5
 df = pd.DataFrame(real_data).sort_values('timestamp')
@@ -235,83 +235,38 @@ for segment in segments:
 
 # ---------------------- Final EKF Run and Plot ----------------------
 
-final_params = [0.06787, 0.08011, 0.04829, 0.38712, 0.41107]
+# final_params = [0.06787, 0.08011, 0.04829, 0.38712, 0.41107]
 
-plt.figure(figsize=(14, 10))
-plt.title('Final EKF Results with Best Parameters')
+# plt.figure(figsize=(14, 10))
+# plt.title('Final EKF Results with Best Parameters')
 
-left_x, left_y, right_x, right_y = [], [], [], []
-for entry in real_data:
-    if 'left' in entry:
-        left_x.append(entry['left'][0])
-        left_y.append(entry['left'][1])
-    if 'right' in entry:
-        right_x.append(entry['right'][0])
-        right_y.append(entry['right'][1])
-plt.scatter(left_x, left_y, color='blue', alpha=0.3, label='Left Sensor', s=10)
-plt.scatter(right_x, right_y, color='red', alpha=0.3, label='Right Sensor', s=10)
+# left_x, left_y, right_x, right_y = [], [], [], []
+# for entry in real_data:
+#     if 'left' in entry:
+#         left_x.append(entry['left'][0])
+#         left_y.append(entry['left'][1])
+#     if 'right' in entry:
+#         right_x.append(entry['right'][0])
+#         right_y.append(entry['right'][1])
+# plt.scatter(left_x, left_y, color='blue', alpha=0.3, label='Left Sensor', s=10)
+# plt.scatter(right_x, right_y, color='red', alpha=0.3, label='Right Sensor', s=10)
 
-first = True
-for seg in time_segments:
-    run_data = seg['data'].to_dict(orient='records')
-    timestamps = [entry['timestamp'] for entry in run_data]
-    virtual_ts = np.arange(min(timestamps), max(timestamps), DT_VIRT).tolist()
+# first = True
+# for seg in time_segments:
+#     run_data = seg['data'].to_dict(orient='records')
+#     timestamps = [entry['timestamp'] for entry in run_data]
+#     virtual_ts = np.arange(min(timestamps), max(timestamps), DT_VIRT).tolist()
 
-    s_filt, P_filt, s_hat, P, _ = ekf_forward(run_data, timestamps, virtual_ts, final_params)
-    s_smooth, _ = smoother(s_filt, P_filt, s_hat, P, timestamps, virtual_ts)
+#     s_filt, P_filt, s_hat, P, _ = ekf_forward(run_data, timestamps, virtual_ts, final_params)
+#     s_smooth, _ = smoother(s_filt, P_filt, s_hat, P, timestamps, virtual_ts)
 
-    label = 'Smoothed Trajectory' if first else None
-    first = False
+#     label = 'Smoothed Trajectory' if first else None
+#     first = False
 
-    plt.plot([s[0] for s in s_smooth], [s[1] for s in s_smooth], 'g-', alpha=0.8, linewidth=2, label=label)
+#     plt.plot([s[0] for s in s_smooth], [s[1] for s in s_smooth], 'g-', alpha=0.8, linewidth=2, label=label)
 
-plt.grid(True, alpha=0.3)
-plt.xlabel('X Position')
-plt.ylabel('Y Position')
-plt.legend()
-plt.show()
-
-
-
-def compute_smoothed_trajectory(subject_data, final_params, dt_virt=0.5):
-    # Preprocess subject_data just like before
-    subject_data['TIME'] = pd.to_datetime(subject_data['TIME'])
-    t0 = subject_data['TIME'].min()
-    subject_data['timestamp'] = (subject_data['TIME'] - t0).dt.total_seconds()
-
-    subject_data['side'] = subject_data['SUBJECTID'].str.extract(r'(\d+[LR])$')[0].str[-1].map({'L': 'left', 'R': 'right'})
-    subject_data['timestamp_rounded'] = subject_data['timestamp'].round(3)
-
-    grouped = subject_data.groupby('timestamp_rounded')
-    real_data = []
-    for ts, group in grouped:
-        entry = {'timestamp': ts}
-        left = group[group['side'] == 'left']
-        right = group[group['side'] == 'right']
-        if not left.empty:
-            entry['left'] = left[['X', 'Y']].iloc[0].to_numpy()
-        if not right.empty:
-            entry['right'] = right[['X', 'Y']].iloc[0].to_numpy()
-        if 'left' in entry and 'right' in entry:
-            entry['observed'] = 'both'
-            entry['obs'] = np.concatenate([entry['left'], entry['right']])
-        elif 'left' in entry:
-            entry['observed'] = 'left'
-            entry['obs'] = entry['left']
-        elif 'right' in entry:
-            entry['observed'] = 'right'
-            entry['obs'] = entry['right']
-        else:
-            entry['observed'] = 'none'
-            entry['obs'] = np.array([])
-        real_data.append(entry)
-
-    timestamps = [entry['timestamp'] for entry in real_data]
-    virtual_ts = np.arange(min(timestamps), max(timestamps), dt_virt).tolist()
-
-    s_filt, P_filt, s_hat, P, _ = ekf_forward(real_data, timestamps, virtual_ts, final_params)
-    s_smooth, _ = smoother(s_filt, P_filt, s_hat, P, timestamps, virtual_ts)
-    
-    return s_smooth  # A list of [x, y, theta, vx, vy, omega]
-
-
+# plt.grid(True, alpha=0.3)
+# plt.xlabel('X Position')
+# plt.ylabel('Y Position')
+# plt.legend()
+# plt.show()
